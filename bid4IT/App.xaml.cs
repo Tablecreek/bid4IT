@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using bid4IT.Connections.Databases;
+using Microsoft.Data.Entity;
 
 namespace bid4IT {
     sealed partial class App {
@@ -21,6 +23,10 @@ namespace bid4IT {
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(Microsoft.ApplicationInsights.WindowsCollectors.Metadata | Microsoft.ApplicationInsights.WindowsCollectors.Session);
             InitializeComponent();
             Suspending += OnSuspending;
+
+            using (var db = new DatabaseProvider()) {
+                db.Database.Migrate();
+            }
         }
         
         protected override void OnLaunched(LaunchActivatedEventArgs e) {

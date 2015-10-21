@@ -1,10 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Data.Entity;
 
-namespace bid4IT.Databases {
-    class DatabaseProvider {
+namespace bid4IT.Connections.Databases {
+    class DatabaseProvider : DbContext  {
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
+            var databasePath = Values.Database.GetCompleteDatabaseFile();
+            optionsBuilder.UseSqlite($"Data source={databasePath}");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder) {
+            
+        }
     }
 }

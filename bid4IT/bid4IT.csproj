@@ -104,7 +104,20 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Database\Address.cs" />
+    <Compile Include="Models\Database\City.cs" />
+    <Compile Include="Models\Database\ContactType.cs" />
+    <Compile Include="Models\Database\Event.cs" />
+    <Compile Include="Models\Database\EventState.cs" />
+    <Compile Include="Models\Database\EventStore.cs" />
+    <Compile Include="Models\Database\EventTrigger.cs" />
+    <Compile Include="Models\Database\Job.cs" />
+    <Compile Include="Models\Database\Person.cs" />
+    <Compile Include="Models\Database\PersonType.cs" />
+    <Compile Include="Models\Database\Phone.cs" />
+    <Compile Include="Models\Database\School.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Values\Database.cs" />
     <Compile Include="Views\BasePage.xaml.cs">
       <DependentUpon>BasePage.xaml</DependentUpon>
     </Compile>

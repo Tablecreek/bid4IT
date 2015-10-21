@@ -25,7 +25,7 @@ namespace bid4IT {
             Suspending += OnSuspending;
 
             using (var db = new DatabaseProvider()) {
-                db.Database.Migrate();
+                //db.Database.Migrate();
             }
         }
         
@@ -45,7 +45,7 @@ namespace bid4IT {
             }
 
             if (rootFrame.Content == null) {
-                rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                rootFrame.Navigate(typeof(Views.LoginPage), e.Arguments);
             }
             Window.Current.Activate();
         }

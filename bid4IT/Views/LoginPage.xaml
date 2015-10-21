@@ -7,7 +7,53 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer>
+    
+        <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+            
+            
+            <StackPanel              
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                MaxWidth="300">
+            
+                <Image
+                    Source="../Assets/Logos/rau.png"/>
+                
+                <TextBlock
+                    Margin="40"
+                    HorizontalAlignment="Center"
+                    FontFamily="Segoe UI"
+                    FontSize="80"
+                    Text="bid4IT"/>
 
-    </Grid>
+                <StackPanel>
+                    <TextBlock 
+                        Margin="0,0,0,4"
+                        Text="Username"/>
+                
+                    <TextBox 
+                        Margin="0,0,0,8"
+                        Name="UsernameTextBox" 
+                        PlaceholderText="Enter your username..." />
+
+                    <TextBlock
+                        Margin="0,0,0,4"
+                        Text="Password"/>
+                
+                    <PasswordBox 
+                        Margin="0,0,0,8"
+                        Name="PasswordBox" 
+                        PlaceholderText="Enter your password..." />
+
+                    <Button
+                        Margin="0,8,0,0"
+                        HorizontalAlignment="Right"                    
+                        Name="LoginButton"
+                        Content="Login"/>
+                
+                </StackPanel>
+            </StackPanel>
+        </RelativePanel>
+    </ScrollViewer>
 </local:BasePage>

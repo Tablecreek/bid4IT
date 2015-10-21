@@ -6,5 +6,8 @@ using System.Threading.Tasks;
 
 namespace bid4IT.Models.Database {
     class City {
+        public int CityId { get; set; }
+        public string Name { get; set; }
+        public int Zip { get; set; }
     }
 }

@@ -6,5 +6,8 @@ using System.Threading.Tasks;
 
 namespace bid4IT.Models.Database {
     class EventTrigger {
+        public int EventTriggerId { get; set; }
+        public ContactType ContactType { get; set; }
+        public string ContactValue { get; set; }
     }
 }

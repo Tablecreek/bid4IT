@@ -6,10 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
 
-namespace bid4IT.Values {
-    class Database {
-        public const string Path = "";
-        public const string Name = "";
+namespace BusinessLayer.Values {
+    class RestClient {
+        public const string Path = "\\\\192.168.75.10\\Austausch\\Informatik\\Abgaben";
+        public const string Name = "bid4IT_db";
 
         public static string GetCompleteDatabaseFile() {
             if (Path.Equals("")) {

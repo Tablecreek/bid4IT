@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace bid4IT.Models.Database {
-    class EventState {
-        public int EventStateId { get; set; }
+namespace BusinessLayer.Models.Database {
+    public class City {
+        public int CityId { get; set; }
         public string Name { get; set; }
-        public string Comment { get; set; }
+        public int Zip { get; set; }
     }
 }

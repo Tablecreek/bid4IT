@@ -28,11 +28,13 @@
                     Text="bid4IT"/>
 
                 <StackPanel>
+                     
                     <TextBlock 
                         Margin="0,0,0,4"
                         Text="Username"/>
                 
                     <TextBox 
+                        TextChanged="UsernameTextBox_TextChanged"
                         Margin="0,0,0,8"
                         Name="UsernameTextBox" 
                         PlaceholderText="Enter your username..." />
@@ -42,11 +44,19 @@
                         Text="Password"/>
                 
                     <PasswordBox 
+                        PasswordChanged="PasswordBox_PasswordChanged"
                         Margin="0,0,0,8"
                         Name="PasswordBox" 
                         PlaceholderText="Enter your password..." />
 
+                    <TextBlock
+                        Name="LoginErrorTextBox"
+                        Visibility="Collapsed"
+                        Foreground="Red"
+                        Text="Wrong username or password!"/>
+
                     <Button
+                        Click="LoginButton_Click"
                         Margin="0,8,0,0"
                         HorizontalAlignment="Right"                    
                         Name="LoginButton"

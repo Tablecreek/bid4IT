@@ -1,0 +1,106 @@
+﻿<Page
+    x:Class="bid4IT.Views.ApplicantDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:bid4IT.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            
+            <AppBarButton
+                Click="SaveApplicantAppBarButton_Click"
+                Name="SaveApplicantAppBarButton"
+                Icon="Save"
+                Label="Save applicant"/>
+            
+            <AppBarButton 
+                Click="CancelAppBarButton_Click"
+                Name="CancelAppBarButton"
+                Icon="Cancel" 
+                Label="Discard changes"/>
+        
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            
+            <Image
+                Source="../Assets/Square150x150Logo.scale-200.png"
+                Height="150"
+                Width="150"/>
+                
+            <TextBlock
+                Margin="20"
+                Text="Name"
+                VerticalAlignment="Center"
+                FontSize="72"/>
+                        
+        </StackPanel>
+
+        <RelativePanel>
+            <StackPanel Width="300">
+                
+                <TextBlock
+                    Margin="12,12,0,0"
+                    Text="First name"/>
+                <TextBox
+                    Name="FirstNameTextBox"
+                    Text=""/>
+
+                <TextBlock
+                    Margin="12,12,0,0"
+                    Text="Last name"/>
+                <TextBox
+                    Text="Axel"/>
+
+                <TextBlock
+                    Name="LastNameTextBox"
+                    Margin="12,12,0,0"
+                    Text="Date of birth"/>
+                
+                <DatePicker 
+                    Name="DateOfBirthDatePicker"
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch"/>
+
+                <TextBlock
+                    Margin="12,12,0,0"
+                    Text="Phone"/>
+                <TextBox
+                    Name="PhoneTextBox"
+                    InputScope="NameOrPhoneNumber"
+                    Text="Axel"/>
+
+                <TextBlock
+                    Margin="12,12,0,0"
+                    Text="Email"/>
+                <TextBox
+                    Name="EmailTextBox"
+                    InputScope="EmailNameOrAddress"
+                    Text="Axel"/>
+
+                <TextBlock
+                    Margin="12,12,0,0"
+                    Text="School"/>
+                <TextBox
+                    Name="SchoolTextBox"
+                    Text="Axel"/>
+
+                <TextBlock
+                    Margin="12,12,0,0"
+                    Text="Dream job"/>
+                <ComboBox
+                    Name="DreamJobTextBox"
+                    HorizontalAlignment="Stretch"
+                    ItemsSource=""/>
+                
+            </StackPanel>
+        </RelativePanel>
+    </StackPanel>
+</Page>

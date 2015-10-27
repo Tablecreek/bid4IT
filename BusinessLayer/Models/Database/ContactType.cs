@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace bid4IT.Models.Database {
-    class ContactType {
+namespace BusinessLayer.Models.Database {
+    public class ContactType {
         public int ContactTypeId { get; set; }
         public string name { get; set; }
     }

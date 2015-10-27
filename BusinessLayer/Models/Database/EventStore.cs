@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace bid4IT.Models.Database {
-    class EventStore {
+namespace BusinessLayer.Models.Database {
+    public class EventStore {
         public int EventStoreId { get; set; }
         public int DefinedEventId { get; set; }
         public string Name { get; set; }

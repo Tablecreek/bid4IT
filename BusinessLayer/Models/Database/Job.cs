@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace bid4IT.Models.Database {
-    class Job {
+namespace BusinessLayer.Models.Database {
+    public class Job {
         public int JobId { get; set; }
         public string Name { get; set; }
         public bool Applicant { get; set; }

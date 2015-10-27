@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Media.Imaging;
 
-namespace bid4IT.Models.Database {
-    class Person {
+namespace BusinessLayer.Models.Database {
+    public class Person {
         public int PersonId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

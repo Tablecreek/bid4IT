@@ -14,7 +14,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using bid4IT.Connections.Databases;
 using Microsoft.Data.Entity;
 
 namespace bid4IT {
@@ -23,10 +22,7 @@ namespace bid4IT {
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(Microsoft.ApplicationInsights.WindowsCollectors.Metadata | Microsoft.ApplicationInsights.WindowsCollectors.Session);
             InitializeComponent();
             Suspending += OnSuspending;
-
-            using (var db = new DatabaseProvider()) {
-                //db.Database.Migrate();
-            }
+            
         }
         
         protected override void OnLaunched(LaunchActivatedEventArgs e) {
@@ -45,7 +41,7 @@ namespace bid4IT {
             }
 
             if (rootFrame.Content == null) {
-                rootFrame.Navigate(typeof(Views.LoginPage), e.Arguments);
+                rootFrame.Navigate(typeof(Views.ApplicantsPage), e.Arguments);
             }
             Window.Current.Activate();
         }
